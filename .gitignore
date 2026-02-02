@@ -1,0 +1,9 @@
+# mdBook build directory
+book/
+
+# OS/Editor specific files
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
