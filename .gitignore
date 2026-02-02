@@ -1,6 +1,6 @@
 # mdBook build directory
 book/
-
+mdbook.exe
 # OS/Editor specific files
 .DS_Store
 *.swp
