@@ -1,41 +1,26 @@
 # Code of Conduct
 
-<!-- This document outlines the expected behavior for all participants of HACKFEST '26. -->
+### What we expect
+To ensure a safe, inclusive, and respectful environment:
+-   **Act Ethically:** Avoid plagiarism and any form of cheating(!!).
+-   **Be Professional:** Behave respectfully towards everyone.
+-   **Foster Inclusivity:** Create a collaborative and welcoming space.
+-   **Respect Differences:** Value diverse viewpoints and experiences.
+-   **Be Mindful:** Be aware of your language and actions.
 
-## Purpose
-The purpose of this Code of Conduct is to ensure a safe, inclusive, and respectful environment for all participants of HACKFEST '26. By participating in this event, you agree to abide by the following guidelines.
-
----
-
-## What we expect
-<!-- These are the core expectations for participants. -->
-> TL;DR: Be nice.
-- We expect you to behave professionally and respectfully towards all participants, organizers, and sponsors.
-- Foster a collaborative and inclusive environment.
-- Respect differing viewpoints and experiences.
-- Be mindful of your language and behavior.
-- Avoid plagiarism or involve in any form of unethical behavior.
----
-
-## Reporting Incidents
-<!-- Information on how to report any violations or concerns. -->
-If you experience or witness anything that upsets you or isn't fair, please report it to a student coordinator or volunteer immediately. You can also contact CDC at [cdc@sreenidhi.edu.in](mailto:cdc@sreenidhi.edu.in)
+[!IMPORTANT]
+**TL;DR:** Be nice.
 
 ---
 
-## Consequences
-<!-- Details about the potential repercussions for violating the Code of Conduct. -->
-Participants found violating this Code of Conduct may face consequences, including but not limited to:
-- Immediate removal from the event.
-- Disqualification from the hackathon.
-- Reporting to the appropriate authorities if necessary.
+If you feel the need to report anything unfair or inappropriate, please reach out to the organizing team.
 
----
+**How to Report:**
+- **In-Person:** Speak with a student coordinator or volunteer.
+- **Email:** Contact the Career Development Cell (CDC) at [cdc@sreenidhi.edu.in](mailto:cdc@sreenidhi.edu.in).
 
-## Acknowledgment
-<!-- Confirmation that participation implies agreement to the Code of Conduct. -->
+### Acknowledgment
+
 By participating in HACKFEST '26, you acknowledge that you have read, understood, and agree to abide by this Code of Conduct.
 
----
-
-Thank you for helping us create a safe and welcoming environment for everyone!
+*Thank you for helping us create a safe and welcoming environment for everyone!*
