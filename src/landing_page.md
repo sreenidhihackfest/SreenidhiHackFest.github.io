@@ -10,7 +10,7 @@ The Hackathon, organized by the Career Development Cell (CDC) of Sreenidhi Insti
         font-size: 2em;
         font-weight: bold;
         text-align: center;
-        color: var(--link-color, #3672d1);
+        color: var(--sidebar-header-border-color, #3672d1);
     }
 
     @keyframes shake {
@@ -35,8 +35,8 @@ The Hackathon, organized by the Career Development Cell (CDC) of Sreenidhi Insti
     }
 
     #problem-button[disabled] {
-        background-color: var(--sidebar-bg, #fafafa);
-        color: var(--fg, #333);
+        background-color: var(--table-header-bg, #fafafa);
+        color: var(--table-header-fg, #333);
         border: 1px solid var(--separator-color, #ccc);
         opacity: 0.7;
         cursor: not-allowed;
