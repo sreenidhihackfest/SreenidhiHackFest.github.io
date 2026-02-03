@@ -23,8 +23,6 @@ Each team must choose **one** of the following paths:
 -   One (1) Hard Problem Statement
 -   Two (2) Easy Problem Statements
 
-No exceptions.
-
 ---
 
 ## Domains

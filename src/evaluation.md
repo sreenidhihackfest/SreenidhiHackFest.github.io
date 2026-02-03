@@ -6,7 +6,7 @@ Welcome to HACKFEST '26! Here’s a brief overview of our evaluation process.
 
 ## Evaluation Tracks & Flow
 
-Our hackathon features two tracks with different evaluation schedules:
+Evaluation process varies based on the track the team picks:
 
 -   **Hard Problem Track:** Solutions are evaluated at the end of Day 2.
 -   **Easy Problem Track:** Teams submit two solutions. The first is evaluated at the end of Day 1, and the second at the end of Day 2.
