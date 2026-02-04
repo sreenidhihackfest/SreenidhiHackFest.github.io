@@ -1,8 +1,4 @@
 [book]
-title = "Sreenidhi HackFest'26"
-authors = []
+title = "Sreeenidhi HackFest 26'"
+authors = ["Hemanth Nandipati"]
 language = "en"
-
-[build]
-build-dir = "book"
-
