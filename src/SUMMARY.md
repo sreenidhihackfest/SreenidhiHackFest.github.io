@@ -6,5 +6,5 @@
 - [How to Win](evaluation.md)
 - [Domains & Tracks](domains.md)
 - [Presented By](sponsors.md)
-- [Resources & Starter Kits](resources.md)
+- [Resources](resources.md)
 - [Code of Conduct](conduct.md)
