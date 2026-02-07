@@ -1,6 +1,6 @@
 # Summary
 
-- [Home](landing_page.md)
+- [Home](index.md)
 - [Problem Statements](problemstatements.md)
 - [Event Schedule](schedule.md)
 - [How to Win](evaluation.md)

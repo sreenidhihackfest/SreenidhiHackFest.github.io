@@ -10,7 +10,7 @@ The Hackathon, organized by the training department of Sreenidhi Institute of Sc
         font-size: 2em;
         font-weight: bold;
         text-align: center;
-        color: var(--sidebar-header-border-color, #3672d1);
+        color: var(--sidebar-active, #3672d1);
     }
 
     @keyframes shake {
@@ -35,9 +35,9 @@ The Hackathon, organized by the training department of Sreenidhi Institute of Sc
     }
 
     #problem-button[disabled] {
-        background-color: var(--table-header-bg, #fafafa);
-        color: var(--table-header-fg, #333);
-        border: 1px solid var(--separator-color, #ccc);
+        background-color: var(--quote-bg, #fafafa);
+        color: var(--icons, #747474);
+        border: 1px solid var(--quote-border, #ccc);
         opacity: 0.7;
         cursor: not-allowed;
     }
@@ -47,8 +47,8 @@ The Hackathon, organized by the training department of Sreenidhi Institute of Sc
     }
 
     #problem-button.active {
-        background-color: var(--link-color, #3672d1);
-        color: var(--page-bg, #fff);
+        background-color: var(--links, #3672d1);
+        color: #ffffff;
     }
 </style>
 

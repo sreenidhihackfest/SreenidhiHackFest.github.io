@@ -28,22 +28,16 @@ a > .hljs {
 #mdbook-menu-bar,
 #mdbook-menu-bar-hover-placeholder {
     z-index: 101;
-    margin: 12px calc(0px - var(--page-padding)) 0;
+    margin: auto calc(0px - var(--page-padding));
 }
 #mdbook-menu-bar {
     position: relative;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
-    padding: 6px 18px;
-    background-color: rgba(255, 255, 255, 0.6);
-    background-color: color-mix(in srgb, var(--bg) 70%, transparent);
-    border: 1px solid color-mix(in srgb, var(--fg) 14%, transparent);
-    border-radius: 16px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    box-shadow: 0 10px 30px color-mix(in srgb, var(--fg) 12%, transparent);
+    background-color: var(--bg);
+    border-block-end-color: var(--bg);
+    border-block-end-width: 1px;
+    border-block-end-style: solid;
 }
 #mdbook-menu-bar.sticky,
 #mdbook-menu-bar-hover-placeholder:hover + #mdbook-menu-bar,
@@ -51,19 +45,18 @@ a > .hljs {
 html.sidebar-visible #mdbook-menu-bar {
     position: -webkit-sticky;
     position: sticky;
-    top: 12px !important;
+    top: 0 !important;
 }
 #mdbook-menu-bar-hover-placeholder {
     position: sticky;
     position: -webkit-sticky;
-    top: 12px;
-    height: calc(var(--menu-bar-height) + 12px);
+    top: 0;
+    height: var(--menu-bar-height);
 }
 #mdbook-menu-bar.bordered {
-    border-color: color-mix(in srgb, var(--fg) 22%, transparent);
+    border-block-end-color: var(--table-border-color);
 }
-#mdbook-menu-bar .fa-svg,
-#mdbook-menu-bar .icon-button {
+#mdbook-menu-bar .fa-svg, #mdbook-menu-bar .icon-button {
     position: relative;
     padding: 0 8px;
     z-index: 10;
@@ -72,8 +65,7 @@ html.sidebar-visible #mdbook-menu-bar {
     transition: color 0.5s;
 }
 @media only screen and (max-width: 420px) {
-    #mdbook-menu-bar .fa-svg,
-    #mdbook-menu-bar .icon-button {
+    #mdbook-menu-bar .fa-svg, #mdbook-menu-bar .icon-button {
         padding: 0 5px;
     }
 }
@@ -90,9 +82,6 @@ html.sidebar-visible #mdbook-menu-bar {
 
 .right-buttons {
     margin: 0 15px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
 }
 .right-buttons a {
     text-decoration: none;
@@ -104,14 +93,6 @@ html.sidebar-visible #mdbook-menu-bar {
 }
 html:not(.js) .left-buttons button {
     display: none;
-}
-
-.menu-left {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    min-width: 0;
-    flex: 1 1 auto;
 }
 
 .menu-title {
@@ -128,45 +109,6 @@ html:not(.js) .left-buttons button {
 }
 .menu-title {
     cursor: pointer;
-}
-
-.menu-brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: inherit;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-}
-.menu-brand-logo {
-    width: 28px;
-    height: 28px;
-    display: block;
-}
-.menu-brand-text {
-    font-size: 1.6rem;
-    white-space: nowrap;
-}
-
-.menu-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    align-items: center;
-    font-size: 1.3rem;
-    line-height: 1;
-    white-space: nowrap;
-}
-.menu-links a {
-    text-decoration: none;
-    color: inherit;
-    opacity: 0.8;
-    transition: opacity 0.2s ease;
-}
-.menu-links a:hover {
-    opacity: 1;
 }
 
 .menu-bar,
@@ -206,17 +148,13 @@ html:not(.js) .left-buttons button {
     align-content: center;
     flex-direction: column;
 
-    transition:
-        color 0.5s,
-        background-color 0.5s;
+    transition: color 0.5s, background-color 0.5s;
 }
 
 .nav-chapters:hover {
     text-decoration: none;
     background-color: var(--theme-hover);
-    transition:
-        background-color 0.15s,
-        color 0.15s;
+    transition: background-color 0.15s, color 0.15s;
 }
 
 .nav-wrapper {
@@ -234,41 +172,29 @@ html:not(.js) .left-buttons button {
 }
 
 /* Only Firefox supports flow-relative values */
-.previous {
-    float: left;
-}
-[dir="rtl"] .previous {
-    float: right;
-}
+.previous { float: left; }
+[dir=rtl] .previous { float: right; }
 
 /* Only Firefox supports flow-relative values */
 .next {
     float: right;
     right: var(--page-padding);
 }
-[dir="rtl"] .next {
+[dir=rtl] .next {
     float: left;
     right: unset;
     left: var(--page-padding);
 }
 
 @media only screen and (max-width: 1080px) {
-    .nav-wide-wrapper {
-        display: none;
-    }
-    .nav-wrapper {
-        display: block;
-    }
+    .nav-wide-wrapper { display: none; }
+    .nav-wrapper { display: block; }
 }
 
 /* sidebar-visible */
 @media only screen and (max-width: 1380px) {
-    #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wide-wrapper {
-        display: none;
-    }
-    #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wrapper {
-        display: block;
-    }
+    #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wide-wrapper { display: none; }
+    #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wrapper { display: block; }
 }
 
 /* Inline code */
@@ -303,13 +229,11 @@ pre > .buttons {
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
-    transition:
-        visibility 0.1s linear,
-        opacity 0.1s linear;
+    transition: visibility 0.1s linear, opacity 0.1s linear;
 }
 pre:hover > .buttons {
     visibility: visible;
-    opacity: 1;
+    opacity: 1
 }
 pre > .buttons :hover {
     color: var(--sidebar-active);
@@ -328,7 +252,7 @@ pre > .buttons button {
     border-color: var(--icons);
     background-color: var(--theme-popup-bg);
     transition: 100ms;
-    transition-property: color, border-color, background-color;
+    transition-property: color,border-color,background-color;
     color: var(--icons);
 }
 
@@ -374,7 +298,7 @@ pre > code {
    wrapper), but that would require fixing a whole bunch of CSS rules.
 */
 .hljs.ace_editor {
-    padding: 0rem 0rem;
+  padding: 0rem 0rem;
 }
 
 pre > .result {
@@ -403,7 +327,7 @@ mark {
 }
 
 mark.fade-out {
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(0,0,0,0) !important;
     cursor: auto;
 }
 
@@ -430,9 +354,7 @@ mark.fade-out {
 .spinner-wrapper {
     --spinner-margin: 2px;
     position: absolute;
-    margin-block-start: calc(
-        var(--searchbar-margin-block-start) + var(--spinner-margin)
-    );
+    margin-block-start: calc(var(--searchbar-margin-block-start) + var(--spinner-margin));
     right: var(--spinner-margin);
     top: 0;
     bottom: var(--spinner-margin);
@@ -549,10 +471,7 @@ ul#mdbook-searchresults span.teaser em {
     left: 0;
     right: 0;
 }
-[dir="rtl"] .sidebar {
-    left: unset;
-    right: 0;
-}
+[dir=rtl] .sidebar { left: unset; right: 0; }
 .sidebar-resizing {
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -607,16 +526,13 @@ html:not(.sidebar-resizing) .sidebar {
     border-left: dotted 2px currentColor;
 }
 
-[dir="rtl"] .sidebar .sidebar-resize-handle {
+[dir=rtl] .sidebar .sidebar-resize-handle {
     left: calc(var(--sidebar-resize-indicator-width) * -1);
     right: unset;
 }
 .js .sidebar .sidebar-resize-handle {
     cursor: col-resize;
-    width: calc(
-        var(--sidebar-resize-indicator-width) -
-            var(--sidebar-resize-indicator-space)
-    );
+    width: calc(var(--sidebar-resize-indicator-width) - var(--sidebar-resize-indicator-space));
 }
 
 html:not(.js) .sidebar-resize-handle {
@@ -625,14 +541,10 @@ html:not(.js) .sidebar-resize-handle {
 
 /* sidebar-hidden */
 #mdbook-sidebar-toggle-anchor:not(:checked) ~ .sidebar {
-    transform: translateX(
-        calc(0px - var(--sidebar-width) - var(--sidebar-resize-indicator-width))
-    );
+    transform: translateX(calc(0px - var(--sidebar-width) - var(--sidebar-resize-indicator-width)));
 }
-[dir="rtl"] #mdbook-sidebar-toggle-anchor:not(:checked) ~ .sidebar {
-    transform: translateX(
-        calc(var(--sidebar-width) + var(--sidebar-resize-indicator-width))
-    );
+[dir=rtl] #mdbook-sidebar-toggle-anchor:not(:checked) ~ .sidebar {
+    transform: translateX(calc(var(--sidebar-width) + var(--sidebar-resize-indicator-width)));
 }
 .sidebar::-webkit-scrollbar {
     background: var(--sidebar-bg);
@@ -643,23 +555,17 @@ html:not(.js) .sidebar-resize-handle {
 
 /* sidebar-visible */
 #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
-    transform: translateX(
-        calc(var(--sidebar-width) + var(--sidebar-resize-indicator-width))
-    );
+    transform: translateX(calc(var(--sidebar-width) + var(--sidebar-resize-indicator-width)));
 }
-[dir="rtl"] #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
-    transform: translateX(
-        calc(0px - var(--sidebar-width) - var(--sidebar-resize-indicator-width))
-    );
+[dir=rtl] #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
+    transform: translateX(calc(0px - var(--sidebar-width) - var(--sidebar-resize-indicator-width)));
 }
 @media only screen and (min-width: 620px) {
     #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
         transform: none;
-        margin-inline-start: calc(
-            var(--sidebar-width) + var(--sidebar-resize-indicator-width)
-        );
+        margin-inline-start: calc(var(--sidebar-width) + var(--sidebar-resize-indicator-width));
     }
-    [dir="rtl"] #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
+    [dir=rtl] #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
         transform: none;
     }
 }
@@ -749,12 +655,8 @@ html:not(.js) .sidebar-resize-handle {
 
 /* On touch devices, add more vertical spacing to make it easier to tap links. */
 @media (-moz-touch-enabled: 1), (pointer: coarse) {
-    .chapter li a {
-        padding: 5px 0;
-    }
-    .spacer {
-        margin: 10px 0;
-    }
+    .chapter li a { padding: 5px 0; }
+    .spacer { margin: 10px 0; }
 }
 
 .section {
@@ -767,9 +669,8 @@ html:not(.js) .sidebar-resize-handle {
 
 .theme-popup {
     position: absolute;
-    right: 10px;
-    left: auto;
-    top: calc(var(--menu-bar-height) + 6px);
+    left: 10px;
+    top: var(--menu-bar-height);
     z-index: 1000;
     border-radius: 4px;
     font-size: 0.7em;
@@ -783,10 +684,7 @@ html:not(.js) .sidebar-resize-handle {
     /* Don't let the children's background extend past the rounded corners. */
     overflow: hidden;
 }
-[dir="rtl"] .theme-popup {
-    left: unset;
-    right: 10px;
-}
+[dir=rtl] .theme-popup { left: unset;  right: 10px; }
 .theme-popup .default {
     color: var(--icons);
 }
@@ -834,7 +732,7 @@ html:not(.js) .sidebar-resize-handle {
 
 /* The popup help box. */
 #mdbook-help-popup {
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
     min-width: 300px;
     max-width: 500px;
     width: 100%;
