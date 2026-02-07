@@ -3,10 +3,11 @@
 html {
     scrollbar-color: var(--scrollbar) transparent;
 }
+
 #mdbook-searchresults a,
 .content a:link,
 a:visited,
-a > .hljs {
+a>.hljs {
     color: var(--links);
 }
 
@@ -30,6 +31,7 @@ a > .hljs {
     z-index: 101;
     margin: auto calc(0px - var(--page-padding));
 }
+
 #mdbook-menu-bar {
     position: relative;
     display: flex;
@@ -39,24 +41,29 @@ a > .hljs {
     border-block-end-width: 1px;
     border-block-end-style: solid;
 }
+
 #mdbook-menu-bar.sticky,
-#mdbook-menu-bar-hover-placeholder:hover + #mdbook-menu-bar,
+#mdbook-menu-bar-hover-placeholder:hover+#mdbook-menu-bar,
 #mdbook-menu-bar:hover,
 html.sidebar-visible #mdbook-menu-bar {
     position: -webkit-sticky;
     position: sticky;
     top: 0 !important;
 }
+
 #mdbook-menu-bar-hover-placeholder {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
     height: var(--menu-bar-height);
 }
+
 #mdbook-menu-bar.bordered {
     border-block-end-color: var(--table-border-color);
 }
-#mdbook-menu-bar .fa-svg, #mdbook-menu-bar .icon-button {
+
+#mdbook-menu-bar .fa-svg,
+#mdbook-menu-bar .icon-button {
     position: relative;
     padding: 0 8px;
     z-index: 10;
@@ -64,8 +71,11 @@ html.sidebar-visible #mdbook-menu-bar {
     cursor: pointer;
     transition: color 0.5s;
 }
+
 @media only screen and (max-width: 420px) {
-    #mdbook-menu-bar .fa-svg, #mdbook-menu-bar .icon-button {
+
+    #mdbook-menu-bar .fa-svg,
+    #mdbook-menu-bar .icon-button {
         padding: 0 5px;
     }
 }
@@ -76,6 +86,7 @@ html.sidebar-visible #mdbook-menu-bar {
     padding: 0;
     color: inherit;
 }
+
 .icon-button .fa-svg {
     margin: 0;
 }
@@ -83,6 +94,7 @@ html.sidebar-visible #mdbook-menu-bar {
 .right-buttons {
     margin: 0 15px;
 }
+
 .right-buttons a {
     text-decoration: none;
 }
@@ -91,6 +103,7 @@ html.sidebar-visible #mdbook-menu-bar {
     display: flex;
     margin: 0 5px;
 }
+
 html:not(.js) .left-buttons button {
     display: none;
 }
@@ -107,6 +120,7 @@ html:not(.js) .left-buttons button {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .menu-title {
     cursor: pointer;
 }
@@ -172,14 +186,20 @@ html:not(.js) .left-buttons button {
 }
 
 /* Only Firefox supports flow-relative values */
-.previous { float: left; }
-[dir=rtl] .previous { float: right; }
+.previous {
+    float: left;
+}
+
+[dir=rtl] .previous {
+    float: right;
+}
 
 /* Only Firefox supports flow-relative values */
 .next {
     float: right;
     right: var(--page-padding);
 }
+
 [dir=rtl] .next {
     float: left;
     right: unset;
@@ -187,37 +207,48 @@ html:not(.js) .left-buttons button {
 }
 
 @media only screen and (max-width: 1080px) {
-    .nav-wide-wrapper { display: none; }
-    .nav-wrapper { display: block; }
+    .nav-wide-wrapper {
+        display: none;
+    }
+
+    .nav-wrapper {
+        display: block;
+    }
 }
 
 /* sidebar-visible */
 @media only screen and (max-width: 1380px) {
-    #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wide-wrapper { display: none; }
-    #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wrapper { display: block; }
+    #mdbook-sidebar-toggle-anchor:checked~.page-wrapper .nav-wide-wrapper {
+        display: none;
+    }
+
+    #mdbook-sidebar-toggle-anchor:checked~.page-wrapper .nav-wrapper {
+        display: block;
+    }
 }
 
 /* Inline code */
 
-:not(pre) > .hljs {
+:not(pre)>.hljs {
     display: inline;
     padding: 0.1em 0.3em;
     border-radius: 3px;
 }
 
-:not(pre):not(a) > .hljs {
+:not(pre):not(a)>.hljs {
     color: var(--inline-code-color);
     overflow-x: initial;
 }
 
-a:hover > .hljs {
+a:hover>.hljs {
     text-decoration: underline;
 }
 
 pre {
     position: relative;
 }
-pre > .buttons {
+
+pre>.buttons {
     position: absolute;
     z-index: 100;
     right: 0px;
@@ -231,16 +262,19 @@ pre > .buttons {
     opacity: 0;
     transition: visibility 0.1s linear, opacity 0.1s linear;
 }
-pre:hover > .buttons {
+
+pre:hover>.buttons {
     visibility: visible;
     opacity: 1
 }
-pre > .buttons :hover {
+
+pre>.buttons :hover {
     color: var(--sidebar-active);
     border-color: var(--icons-hover);
     background-color: var(--theme-hover);
 }
-pre > .buttons button {
+
+pre>.buttons button {
     cursor: inherit;
     margin: 0px 5px;
     padding: 2px 3px 0px 4px;
@@ -252,14 +286,15 @@ pre > .buttons button {
     border-color: var(--icons);
     background-color: var(--theme-popup-bg);
     transition: 100ms;
-    transition-property: color,border-color,background-color;
+    transition-property: color, border-color, background-color;
     color: var(--icons);
 }
 
-pre > .buttons button.clip-button {
+pre>.buttons button.clip-button {
     padding: 2px 4px 0px 6px;
 }
-pre > .buttons button.clip-button::before {
+
+pre>.buttons button.clip-button::before {
     /* clipboard image from octicons (https://github.com/primer/octicons/tree/v2.0.0) MIT license
      */
     content: url('data:image/svg+xml,<svg width="21" height="20" viewBox="0 0 24 25" \
@@ -272,12 +307,13 @@ xmlns="http://www.w3.org/2000/svg" aria-label="Copy to clipboard">\
 </svg>');
     filter: var(--copy-button-filter);
 }
-pre > .buttons button.clip-button:hover::before {
+
+pre>.buttons button.clip-button:hover::before {
     filter: var(--copy-button-filter-hover);
 }
 
 @media (pointer: coarse) {
-    pre > .buttons button {
+    pre>.buttons button {
         /* On mobile, make it easier to tap buttons. */
         padding: 0.3rem 1rem;
     }
@@ -287,7 +323,8 @@ pre > .buttons button.clip-button:hover::before {
         display: none;
     }
 }
-pre > code {
+
+pre>code {
     display: block;
     padding: 1rem;
 }
@@ -298,10 +335,10 @@ pre > code {
    wrapper), but that would require fixing a whole bunch of CSS rules.
 */
 .hljs.ace_editor {
-  padding: 0rem 0rem;
+    padding: 0rem 0rem;
 }
 
-pre > .result {
+pre>.result {
     margin-block-start: 10px;
 }
 
@@ -327,7 +364,7 @@ mark {
 }
 
 mark.fade-out {
-    background-color: rgba(0,0,0,0) !important;
+    background-color: rgba(0, 0, 0, 0) !important;
     cursor: auto;
 }
 
@@ -340,9 +377,11 @@ mark.fade-out {
 #mdbook-searchbar-outer.searching #mdbook-searchbar {
     padding-right: 30px;
 }
+
 #mdbook-searchbar-outer .spinner-wrapper {
     display: none;
 }
+
 #mdbook-searchbar-outer.searching .spinner-wrapper {
     display: block;
 }
@@ -371,6 +410,7 @@ mark.fade-out {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -389,6 +429,7 @@ mark.fade-out {
     background-color: var(--searchbar-bg);
     color: var(--searchbar-fg);
 }
+
 #mdbook-searchbar:focus,
 #mdbook-searchbar.active {
     box-shadow: 0 0 3px var(--searchbar-shadow-color);
@@ -415,14 +456,17 @@ ul#mdbook-searchresults {
     list-style: none;
     padding-inline-start: 20px;
 }
+
 ul#mdbook-searchresults li {
     margin: 10px 0px;
     padding: 2px;
     border-radius: 2px;
 }
+
 ul#mdbook-searchresults li.focus {
     background-color: var(--searchresults-li-bg);
 }
+
 ul#mdbook-searchresults span.teaser {
     display: block;
     clear: both;
@@ -432,6 +476,7 @@ ul#mdbook-searchresults span.teaser {
     margin-inline-end: 0;
     font-size: 0.8em;
 }
+
 ul#mdbook-searchresults span.teaser em {
     font-weight: bold;
     font-style: normal;
@@ -452,6 +497,7 @@ ul#mdbook-searchresults span.teaser em {
     background-color: var(--sidebar-bg);
     color: var(--sidebar-fg);
 }
+
 .sidebar-iframe-inner {
     --padding: 10px;
 
@@ -462,6 +508,7 @@ ul#mdbook-searchresults span.teaser em {
     color: var(--sidebar-fg);
     min-height: calc(100vh - var(--padding) * 2);
 }
+
 .sidebar-iframe-outer {
     border: none;
     height: 100%;
@@ -471,19 +518,28 @@ ul#mdbook-searchresults span.teaser em {
     left: 0;
     right: 0;
 }
-[dir=rtl] .sidebar { left: unset; right: 0; }
+
+[dir=rtl] .sidebar {
+    left: unset;
+    right: 0;
+}
+
 .sidebar-resizing {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
+
 html:not(.sidebar-resizing) .sidebar {
-    transition: transform 0.3s; /* Animation: slide away */
+    transition: transform 0.3s;
+    /* Animation: slide away */
 }
+
 .sidebar code {
     line-height: 2em;
 }
+
 .sidebar .sidebar-scrollbox {
     overflow-y: auto;
     position: absolute;
@@ -493,6 +549,7 @@ html:not(.sidebar-resizing) .sidebar {
     right: 0;
     padding: 10px 10px;
 }
+
 .sidebar .sidebar-resize-handle {
     position: absolute;
     cursor: col-resize;
@@ -513,12 +570,14 @@ html:not(.sidebar-resizing) .sidebar {
     align-items: center;
     justify-content: flex-start;
 }
+
 .sidebar-resize-handle .sidebar-resize-indicator::before {
     content: "";
     width: 2px;
     height: 12px;
     border-left: dotted 2px currentColor;
 }
+
 .sidebar-resize-handle .sidebar-resize-indicator::after {
     content: "";
     width: 2px;
@@ -530,6 +589,7 @@ html:not(.sidebar-resizing) .sidebar {
     left: calc(var(--sidebar-resize-indicator-width) * -1);
     right: unset;
 }
+
 .js .sidebar .sidebar-resize-handle {
     cursor: col-resize;
     width: calc(var(--sidebar-resize-indicator-width) - var(--sidebar-resize-indicator-space));
@@ -540,32 +600,38 @@ html:not(.js) .sidebar-resize-handle {
 }
 
 /* sidebar-hidden */
-#mdbook-sidebar-toggle-anchor:not(:checked) ~ .sidebar {
+#mdbook-sidebar-toggle-anchor:not(:checked)~.sidebar {
     transform: translateX(calc(0px - var(--sidebar-width) - var(--sidebar-resize-indicator-width)));
 }
-[dir=rtl] #mdbook-sidebar-toggle-anchor:not(:checked) ~ .sidebar {
+
+[dir=rtl] #mdbook-sidebar-toggle-anchor:not(:checked)~.sidebar {
     transform: translateX(calc(var(--sidebar-width) + var(--sidebar-resize-indicator-width)));
 }
+
 .sidebar::-webkit-scrollbar {
     background: var(--sidebar-bg);
 }
+
 .sidebar::-webkit-scrollbar-thumb {
     background: var(--scrollbar);
 }
 
 /* sidebar-visible */
-#mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
+#mdbook-sidebar-toggle-anchor:checked~.page-wrapper {
     transform: translateX(calc(var(--sidebar-width) + var(--sidebar-resize-indicator-width)));
 }
-[dir=rtl] #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
+
+[dir=rtl] #mdbook-sidebar-toggle-anchor:checked~.page-wrapper {
     transform: translateX(calc(0px - var(--sidebar-width) - var(--sidebar-resize-indicator-width)));
 }
+
 @media only screen and (min-width: 620px) {
-    #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
+    #mdbook-sidebar-toggle-anchor:checked~.page-wrapper {
         transform: none;
         margin-inline-start: calc(var(--sidebar-width) + var(--sidebar-resize-indicator-width));
     }
-    [dir=rtl] #mdbook-sidebar-toggle-anchor:checked ~ .page-wrapper {
+
+    [dir=rtl] #mdbook-sidebar-toggle-anchor:checked~.page-wrapper {
         transform: none;
     }
 }
@@ -615,7 +681,7 @@ html:not(.js) .sidebar-resize-handle {
 }
 
 /* collapse the section */
-.chapter li:not(.expanded) > ol {
+.chapter li:not(.expanded)>ol {
     display: none;
 }
 
@@ -625,7 +691,7 @@ html:not(.js) .sidebar-resize-handle {
 }
 
 /* When expanded, rotate the chevron to point down. */
-.chapter li.expanded > span > .chapter-fold-toggle div {
+.chapter li.expanded>span>.chapter-fold-toggle div {
     transform: rotate(90deg);
 }
 
@@ -639,7 +705,7 @@ html:not(.js) .sidebar-resize-handle {
     padding-left: 8px;
 }
 
-.on-this-page > ol {
+.on-this-page>ol {
     padding-left: 0;
 }
 
@@ -649,14 +715,21 @@ html:not(.js) .sidebar-resize-handle {
     height: 3px;
     margin: 5px 0px;
 }
+
 .chapter .spacer {
     background-color: var(--sidebar-spacer);
 }
 
 /* On touch devices, add more vertical spacing to make it easier to tap links. */
-@media (-moz-touch-enabled: 1), (pointer: coarse) {
-    .chapter li a { padding: 5px 0; }
-    .spacer { margin: 10px 0; }
+@media (-moz-touch-enabled: 1),
+(pointer: coarse) {
+    .chapter li a {
+        padding: 5px 0;
+    }
+
+    .spacer {
+        margin: 10px 0;
+    }
 }
 
 .section {
@@ -684,10 +757,16 @@ html:not(.js) .sidebar-resize-handle {
     /* Don't let the children's background extend past the rounded corners. */
     overflow: hidden;
 }
-[dir=rtl] .theme-popup { left: unset;  right: 10px; }
+
+[dir=rtl] .theme-popup {
+    left: unset;
+    right: 10px;
+}
+
 .theme-popup .default {
     color: var(--icons);
 }
+
 .theme-popup .theme {
     width: 100%;
     border: 0;
@@ -701,6 +780,7 @@ html:not(.js) .sidebar-resize-handle {
     background: inherit;
     font-size: inherit;
 }
+
 .theme-popup .theme:hover {
     background-color: var(--theme-hover);
 }
@@ -732,7 +812,7 @@ html:not(.js) .sidebar-resize-handle {
 
 /* The popup help box. */
 #mdbook-help-popup {
-    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
     min-width: 300px;
     max-width: 500px;
     width: 100%;
@@ -753,4 +833,294 @@ html:not(.js) .sidebar-resize-handle {
     text-align: center;
     /* mdbook's margin for h2 is way too large. */
     margin: 10px;
+}
+
+/* === HackFest Glassmorphism Effects === */
+
+/* Glass menu bar */
+.hackfest #mdbook-menu-bar {
+    background: rgba(26, 21, 48, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-block-end-color: rgba(188, 19, 254, 0.2);
+    box-shadow: 0 8px 32px rgba(188, 19, 254, 0.25), 0 0 0 1px rgba(188, 19, 254, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(188, 19, 254, 0.2);
+}
+
+/* Glass sidebar */
+.hackfest .sidebar {
+    background: rgba(26, 21, 48, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(188, 19, 254, 0.2);
+}
+
+/* Sidebar items hover effect */
+.hackfest .chapter li a:hover {
+    background: rgba(188, 19, 254, 0.15);
+    border-radius: 4px;
+    padding-left: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Menu title with Adriana font */
+.hackfest .menu-title {
+    font-family: 'Adriana', 'Horizon', sans-serif;
+    background: var(--gradient-brand, linear-gradient(135deg, #bc13fe 0%, #8a52d8 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+/* Glass theme popup */
+.hackfest .theme-popup {
+    background: rgba(26, 21, 48, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-color: rgba(188, 19, 254, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Searchbar glass effect */
+.hackfest #mdbook-searchbar {
+    background: rgba(26, 21, 48, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-color: rgba(188, 19, 254, 0.4);
+}
+
+.hackfest #mdbook-searchbar:focus,
+.hackfest #mdbook-searchbar.active {
+    box-shadow: 0 0 8px rgba(188, 19, 254, 0.5);
+    border-color: rgba(188, 19, 254, 0.6);
+}
+
+/* Hide sidebar for HackFest theme */
+.hackfest .sidebar,
+.hackfest #mdbook-sidebar-toggle {
+    display: none !important;
+}
+
+/* Adjust page wrapper when sidebar is hidden */
+.hackfest #mdbook-sidebar-toggle-anchor:checked~.page-wrapper,
+.hackfest .page-wrapper {
+    margin-left: 0 !important;
+    transform: none !important;
+}
+
+/* Header Navigation Styles */
+.hackfest .header-nav {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.hackfest .header-nav .nav-link {
+    color: var(--fg);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hackfest .header-nav .nav-link:hover {
+    background: rgba(188, 19, 254, 0.15);
+    border-color: rgba(188, 19, 254, 0.3);
+    color: #bc13fe;
+    transform: translateY(-1px);
+}
+
+.hackfest .header-nav .nav-link.active {
+    background: rgba(188, 19, 254, 0.25);
+    border-color: rgba(188, 19, 254, 0.5);
+    color: #bc13fe;
+}
+
+/* Make menu bar wrap properly on small screens */
+.hackfest #mdbook-menu-bar {
+    flex-wrap: nowrap;
+    gap: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+}
+
+/* Header Left - Logo */
+.hackfest .header-left {
+    display: flex;
+    align-items: center;
+}
+
+.hackfest .menu-title {
+    font-family: "Adriana", "Horizon", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #bc13fe, #ff007f, #00f3ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 6s ease infinite;
+    white-space: nowrap;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Header Right - Navigation + Theme Picker */
+.hackfest .header-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Header Navigation Styles */
+.hackfest .header-nav {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+.hackfest .header-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.hackfest .header-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(188, 19, 254, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.hackfest .header-nav .nav-link:hover::before {
+    left: 100%;
+}
+
+.hackfest .header-nav .nav-link:hover {
+    background: rgba(188, 19, 254, 0.15);
+    color: #bc13fe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(188, 19, 254, 0.3);
+}
+
+.hackfest .header-nav .nav-link.active {
+    background: linear-gradient(135deg, rgba(188, 19, 254, 0.2), rgba(255, 0, 127, 0.2));
+    color: #ff007f;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(255, 0, 127, 0.2);
+}
+
+/* Theme Picker Button Styling */
+.hackfest #mdbook-theme-toggle {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    padding: 0.6rem;
+    border-radius: 8px;
+}
+
+.hackfest #mdbook-theme-toggle:hover {
+    background: rgba(188, 19, 254, 0.15);
+    color: #bc13fe;
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* Responsive navigation */
+@media only screen and (max-width: 1200px) {
+    .hackfest #mdbook-menu-bar {
+        padding: 1rem 1.5rem;
+    }
+
+    .hackfest .menu-title {
+        font-size: 1.5rem;
+    }
+
+    .hackfest .header-nav .nav-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85em;
+    }
+
+    .hackfest .header-right {
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hackfest .header-nav {
+        margin: 0.5rem 0;
+        order: 10;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hackfest .menu-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hackfest .header-nav {
+        gap: 0.3rem;
+    }
+
+    .hackfest .header-nav .nav-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8em;
+    }
+}
+
+/* Make content transparent to show plexus background */
+.hackfest .content,
+.hackfest main,
+.hackfest .page,
+.hackfest .page-wrapper,
+.hackfest #content,
+.hackfest #mdbook-content {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Hide navigation arrows */
+.hackfest .nav-chapters,
+.hackfest .mobile-nav-chapters {
+    display: none !important;
 }

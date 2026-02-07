@@ -1,4 +1,9 @@
 [book]
-title = "Sreeenidhi HackFest 26'"
-authors = ["Hemanth Nandipati"]
+title = "HackFest '26"
+authors = ["SREENIDHI Institute of Science and Technology"]
 language = "en"
+
+[output.html]
+default-theme = "hackfest"
+preferred-dark-theme = "hackfest"
+additional-js = ["theme/plexus-background.js"]
